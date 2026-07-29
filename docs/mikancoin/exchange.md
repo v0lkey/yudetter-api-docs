@@ -4,8 +4,7 @@
 
 ## 説明
 
-Mikancoin（MKC）の取引を実行します。YDCの `/api/yudecoin/trade` とほぼ同等ですが、**制限がありません**（日次制限・注文上限・サーキットブレーカーなし）。
-また、レスポンスのフィールド名が一部異なります。
+Mikancoin（MKC）の取引を実行します。YDCの `/api/yudecoin/trade` とほぼ同等ですが、レスポンスのフィールド名が一部異なります。
 
 ## リクエスト
 
@@ -89,11 +88,11 @@ Mikancoin（MKC）の取引を実行します。YDCの `/api/yudecoin/trade` と
 
 | 項目 | `/api/yudecoin/trade` | `/api/mikancoin/exchange` |
 |---|---|---|
-| 買い注文上限 | min(3M*price, YD残高10%) | **制限なし** |
-| 売り注文上限 | min(3M, YDC残高) | **制限なし** |
-| サーキットブレーカー | ±30% | **なし** |
-| 日次取引量制限 | あり（`tradedAmountToday`） | **なし** |
+| 一回の取引上限 | 保有YD残高の10% | 保有YD残高の10% |
+| 日次取引量制限 | 通貨ごとに100万YD分まで | 通貨ごとに100万YD分まで |
 | 手数料 | 1% | 1% |
+| サーキットブレーカー | あり（閾値非公開） | なし |
+| 取引レスポンス | `executedYdAmount` / `executedYudecoinAmount` / `newBalance` | `ydAmount` / `mkcAmount` / `mkcBalance` / `transactionId` |
 | 取引レスポンス | `executedYdAmount` / `executedYudecoinAmount` / `newBalance` | `ydAmount` / `mkcAmount` / `mkcBalance` / `transactionId` |
 
 ## 実行例
