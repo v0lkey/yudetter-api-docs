@@ -91,7 +91,7 @@ Mikancoin（MKC）の取引を実行します。YDCの `/api/yudecoin/trade` と
 | 一回の取引上限 | 保有YD残高の10% | 保有YD残高の10% |
 | 日次取引量制限 | 通貨ごとに100万YD分まで | 通貨ごとに100万YD分まで |
 | 手数料 | 1% | 1% |
-| サーキットブレーカー | あり（閾値非公開） | なし |
+| サーキットブレーカー | あり（閾値非公開） | あり（閾値非公開） |
 | 取引レスポンス | `executedYdAmount` / `executedYudecoinAmount` / `newBalance` | `ydAmount` / `mkcAmount` / `mkcBalance` / `transactionId` |
 | 取引レスポンス | `executedYdAmount` / `executedYudecoinAmount` / `newBalance` | `ydAmount` / `mkcAmount` / `mkcBalance` / `transactionId` |
 
