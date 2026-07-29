@@ -1,0 +1,112 @@
+site_name: Yudetter API
+site_description: Yudetter API 非公式ドキュメント
+site_url: https://v0lkey.github.io/yudetter-api-docs/
+repo_url: https://github.com/v0lkey/yudetter-api-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: pink
+  features:
+    - navigation.instant
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - toc:
+      permalink: true
+
+nav:
+  - 概要: index.md
+  - 共通仕様: overview.md
+  - データモデル: models.md
+  - ユーザー系 (users):
+    - 自分の情報: users/me-get.md
+    - アカウント削除: users/me-delete.md
+    - ブロック一覧: users/me-blocks.md
+    - ユーザー情報: users/user-get.md
+    - フォロー: users/follow.md
+    - フォロワー: users/followers.md
+    - フォロー中: users/following.md
+    - フォロー承認: users/follow-approve.md
+    - フォロー拒否: users/follow-reject.md
+    - フォローリクエスト: users/me-follow-requests.md
+    - ブロック: users/block.md
+    - BAN: users/ban.md
+    - ユーザーの投稿: users/yudates.md
+    - ユーザーのいいね: users/likes.md
+    - メール変更リクエスト: users/request-email-change.md
+    - パスワードリセット: users/request-password-reset.md
+    - メール検索: users/lookup-email.md
+    - ユーザー名ログイン: users/sign-in-by-username.md
+    - ユーザー名重複チェック: users/check-username.md
+  - 投稿系 (yudates):
+    - 一覧・作成: yudates/list-create.md
+    - 取得・編集・削除: yudates/get-patch-delete.md
+    - いいね・リユデート: yudates/like-reyudate.md
+    - リアクション: yudates/reactions.md
+    - 返信: yudates/replies.md
+    - ピン留め: yudates/pin.md
+    - 通報: yudates/report.md
+    - 予約投稿: yudates/scheduled.md
+  - 探索・検索 (explore):
+    - 一覧: explore/list.md
+    - 人気: explore/popular.md
+    - トレンド: explore/trends.md
+    - 検索: explore/search.md
+  - 通知 (notifications):
+    - 一覧: notifications/list.md
+    - 未読数: notifications/unread-count.md
+    - 既読: notifications/read.md
+    - SSEストリーム: notifications/stream.md
+  - ウォレット (wallet):
+    - 履歴: wallet/history.md
+  - マーケット (market):
+    - 商品一覧: market/items.md
+    - 商品CRUD: market/item-crud.md
+    - 購入: market/purchase.md
+    - 一括購入: market/buy.md
+    - 分割購入: market/buy-installment.md
+    - 入札: market/bid.md
+    - いいね: market/like.md
+    - コメント: market/comments.md
+    - 請求先ID: market/claim-id.md
+    - ユーザーID申請: market/apply-user-id.md
+    - 分割払い eligibility: market/installments-eligibility.md
+    - 通報: market/report.md
+    - 削除リクエスト: market/request-delete.md
+  - ゲーム (games):
+    - 一覧・作成: games/list-create.md
+    - 詳細: games/detail.md
+    - 更新: games/update.md
+    - 認証確認: games/auth-verify.md
+    - 課金: games/charge.md
+  - ランキング (rankings):
+    - 取得: rankings/get.md
+    - 参加: rankings/opt-in.md
+    - 辞退: rankings/opt-out.md
+  - アップロード:
+    - upload.md
+  - Yudecoin:
+    - 市場: yudecoin/market.md
+    - チャート: yudecoin/chart.md
+    - ウォレット: yudecoin/wallet.md
+    - トークン: yudecoin/token.md
+    - 取引: yudecoin/trade.md
+  - Mikancoin:
+    - 市場: mikancoin/market.md
+    - チャート: mikancoin/chart.md
+    - ウォレット: mikancoin/wallet.md
+    - トークン: mikancoin/token.md
+    - 両替: mikancoin/exchange.md
+  - VIP:
+    - カジノアクセス: vip/casino-access.md
