@@ -1,8 +1,8 @@
 # Yudetter API ドキュメント
 
-> 解析日: 2026-07-29
+> 解析日: 2026-08-02
 > バージョン: 公開前（yudetter.com）
-> 全エンドポイント数: **87**
+> 全エンドポイント数: **91**
 
 ---
 
@@ -42,6 +42,9 @@
 | POST | `/api/users/:username/ban` | [ban.md](users/ban.md) | 要 |
 | POST | `/api/users/request-email-change` | [request-email-change.md](users/request-email-change.md) | 要 |
 | POST | `/api/users/request-password-reset` | [request-password-reset.md](users/request-password-reset.md) | 要 |
+| POST | `/api/users/setup` | [setup.md](users/setup.md) | 要 |
+| POST | `/api/users/reset-password` | [reset-password.md](users/reset-password.md) | 🟢不要 |
+| POST | `/api/users/confirm-email-change` | [confirm-email-change.md](users/confirm-email-change.md) | 要 |
 
 ### 📝 ユデート（投稿）系 `/api/yudates/*`
 
@@ -73,6 +76,7 @@
 | GET | `/api/explore/popular` | [popular.md](explore/popular.md) | 不要 |
 | GET | `/api/explore/trends` | [trends.md](explore/trends.md) | 不要 |
 | GET | `/api/explore/search` | [search.md](explore/search.md) | 不要 |
+| GET | `/api/search` | [search.md](search.md) | 不要 |
 
 ### 🔔 通知系 `/api/notifications/*`
 
@@ -183,7 +187,7 @@
 
 | 項目 | 値 |
 |---|---|
-| 総エンドポイント数 | 87 |
-| 総ファイル数 | 69 |
-| 認証要エンドポイント | 65 |
-| 認証不要エンドポイント | 22 |
+| 総エンドポイント数 | 91 |
+| 総ファイル数 | 73 |
+| 認証要エンドポイント | 67 |
+| 認証不要エンドポイント | 24 |
