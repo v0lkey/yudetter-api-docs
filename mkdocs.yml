@@ -100,6 +100,7 @@ nav:
     - 課金トークン: games/charge-token.md
     - 報酬申請: games/reward-requests.md
     - セーブデータ: games/save-data.md
+    - YGS SDK: games/ygs-sdk.md
   - ランキング (rankings):
     - 取得: rankings/get.md
     - 参加: rankings/opt-in.md

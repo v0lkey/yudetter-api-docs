@@ -137,6 +137,8 @@
 | GET | `/api/games/:id/save-data` | [save-data.md](games/save-data.md) | 要 |
 | POST | `/api/games/:id/save-data` | [save-data.md](games/save-data.md) | 要 |
 
+> 💡 ゲーム内連携は [YGS SDK（ゲーム内 postMessage 連携）](games/ygs-sdk.md) を参照（課金・報酬出金・認証・クラウドセーブ）
+
 ### 🏆 ランキング系 `/api/rankings/*`
 
 | メソッド | パス | ファイル | 認証 |
