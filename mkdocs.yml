@@ -49,6 +49,10 @@ nav:
     - メール検索: users/lookup-email.md
     - ユーザー名ログイン: users/sign-in-by-username.md
     - ユーザー名重複チェック: users/check-username.md
+    - セットアップ: users/setup.md
+    - メール変更確定: users/confirm-email-change.md
+    - パスワードリセット実行: users/reset-password.md
+    - ログアウト: users/sign-out.md
   - 投稿系 (yudates):
     - 一覧・作成: yudates/list-create.md
     - 取得・編集・削除: yudates/get-patch-delete.md
@@ -58,11 +62,13 @@ nav:
     - ピン留め: yudates/pin.md
     - 通報: yudates/report.md
     - 予約投稿: yudates/scheduled.md
+    - アンケート: yudates/poll.md
   - 探索・検索 (explore):
     - 一覧: explore/list.md
     - 人気: explore/popular.md
     - トレンド: explore/trends.md
     - 検索: explore/search.md
+    - 横断検索 ( /api/search ): search.md
   - 通知 (notifications):
     - 一覧: notifications/list.md
     - 未読数: notifications/unread-count.md
@@ -89,7 +95,11 @@ nav:
     - 詳細: games/detail.md
     - 更新: games/update.md
     - 認証確認: games/auth-verify.md
+    - ゲーム認証リクエスト: games/auth-request.md
     - 課金: games/charge.md
+    - 課金トークン: games/charge-token.md
+    - 報酬申請: games/reward-requests.md
+    - セーブデータ: games/save-data.md
   - ランキング (rankings):
     - 取得: rankings/get.md
     - 参加: rankings/opt-in.md
@@ -108,5 +118,13 @@ nav:
     - ウォレット: mikancoin/wallet.md
     - トークン: mikancoin/token.md
     - 両替: mikancoin/exchange.md
+  - Ykc:
+    - 市場: ykc/market.md
+    - チャート: ykc/chart.md
+    - ウォレット: ykc/wallet.md
+    - 見積り: ykc/quote.md
+    - トークン: ykc/token.md
+    - 両替: ykc/exchange.md
+    - 管理 API: ykc/admin.md
   - VIP:
     - カジノアクセス: vip/casino-access.md

@@ -10,8 +10,8 @@
 
 | ドキュメント | 内容 |
 |---|---|
-| [_overview.md](_overview.md) | 認証・ページネーション・エラー形式・CORS等の共通仕様 |
-| [_models.md](_models.md) | 全データモデル定義（User, Yudate, Game, MarketItem...） |
+| [overview.md](overview.md) | 認証・ページネーション・エラー形式・CORS等の共通仕様 |
+| [models.md](models.md) | 全データモデル定義（User, Yudate, Game, MarketItem...） |
 
 ---
 
@@ -148,7 +148,7 @@
 
 | メソッド | パス | ファイル | 認証 |
 |---|---|---|---|
-| GET | `/api/auth/get-session` | 認証確認（_overview.md参照） | 🟢不要 |
+| GET | `/api/auth/get-session` | 認証確認（[overview.md](overview.md)参照） | 🟢不要 |
 
 ### 👑 VIP系 `/api/vip/*`
 
