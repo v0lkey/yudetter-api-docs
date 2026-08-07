@@ -1,10 +1,66 @@
-# [GET] /api/games/:id/reward-requests ／ [POST] /api/games/:id/reward-requests/:requestId/:action
+# [GET] /api/games/:id/reward-requests ／ [POST] /api/games/:id/reward-requests ／ [POST] /api/games/:id/reward-requests/:requestId/:action
 
 > 認証: 要 | レート制限: なし
 
 ## 説明
 
-ゲームの報酬（リワード）申請の一覧取得と、承認・却下を行います。クリエイターがゲームから送られた報酬支払いリクエストを管理するために使用します。
+ゲームの報酬（リワード）申請の作成・一覧取得と、承認・却下を行います。クリエイターがゲームから送られた報酬支払いリクエストを管理するために使用します。
+
+---
+
+# [POST] /api/games/:id/reward-requests
+
+報酬申請を作成します。ゲーム内で報酬の受け取り（出金）が発生した際に、金額と説明を添えて申請します。申請はゲーム作成者側の一覧に `pending` として登録され、承認されると作成者のYD残高から支払われます。
+
+## パスパラメータ
+
+| 名前 | 型 | 必須 | 説明 |
+|---|---|---|---|
+| `id` | string | はい | ゲームID |
+
+## リクエストBody
+
+| 名前 | 型 | 必須 | 説明 |
+|---|---|---|---|
+| `amount` | number | はい | 報酬額（YD） |
+| `description` | string | いいえ | 報酬の説明（最大200文字） |
+
+```json
+{
+  "amount": 500,
+  "description": "スコア報酬"
+}
+```
+
+## レスポンス
+
+### 成功 (200)
+
+```json
+{
+  "requestId": 123,
+  "status": "pending"
+}
+```
+
+### エラー (400)
+
+```json
+{
+  "error": "報酬申請を作成できません"
+}
+```
+
+## 実行例
+
+```javascript
+fetch("/api/games/abc123/reward-requests", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  credentials: "include",
+  body: JSON.stringify({ amount: 500, description: "スコア報酬" })
+})
+```
 
 ---
 

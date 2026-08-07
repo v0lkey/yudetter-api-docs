@@ -2,7 +2,7 @@
 
 > 解析日: 2026-08-07
 > バージョン: 公開前（yudetter.com）
-> 全エンドポイント数: **112**
+> 全エンドポイント数: **113**
 
 ---
 
@@ -132,6 +132,7 @@
 | POST | `/api/games/:id/auth-request` | [auth-request.md](games/auth-request.md) | 要 |
 | POST | `/api/games/:id/charge-token` | [charge-token.md](games/charge-token.md) | 要 |
 | GET | `/api/games/:id/reward-requests` | [reward-requests.md](games/reward-requests.md) | 要 |
+| POST | `/api/games/:id/reward-requests` | [reward-requests.md](games/reward-requests.md) | 要 |
 | POST | `/api/games/:id/reward-requests/:requestId/:action` | [reward-requests.md](games/reward-requests.md) | 要 |
 | GET | `/api/games/:id/save-data` | [save-data.md](games/save-data.md) | 要 |
 | POST | `/api/games/:id/save-data` | [save-data.md](games/save-data.md) | 要 |
