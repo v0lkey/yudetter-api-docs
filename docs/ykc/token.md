@@ -1,10 +1,10 @@
-# [POST] /api/mikancoin/token
+# [POST] /api/ykc/token
 
 > 認証: 要（Cookie + X-Yudetter-Web） | レート制限: なし
 
 ## 説明
 
-Mikancoinの取引に必要なワンタイム tradeToken を発行します。YDCと同一フローです。
+Ykc（YKC）の取引に必要なワンタイム tradeToken を発行します。Mikancoinの `/api/mikancoin/token` と同一フローです。
 
 ## リクエスト
 
@@ -40,7 +40,7 @@ Mikancoinの取引に必要なワンタイム tradeToken を発行します。YD
 ## 実行例
 
 ```javascript
-const res = await fetch("/api/mikancoin/token", {
+const res = await fetch("/api/ykc/token", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -53,4 +53,4 @@ const { token } = await res.json()
 
 ## 備考
 
-- フロントエンドは `/api/${Ct}/token`（`Ct = "ykc" | "mikancoin"`）の共通コードからYkc版を呼び分けています。Ykc版は [/api/ykc/token](../ykc/token.md) を参照してください
+- フロントエンドは `/api/${Ct}/token` という共通コードから `Ct = "ykc" | "mikancoin"` を切り替えて呼び出すため、Mikancoin版と同一の実装です

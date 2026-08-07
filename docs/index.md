@@ -1,8 +1,8 @@
 # Yudetter API ドキュメント
 
-> 解析日: 2026-08-02
+> 解析日: 2026-08-07
 > バージョン: 公開前（yudetter.com）
-> 全エンドポイント数: **91**
+> 全エンドポイント数: **112**
 
 ---
 
@@ -45,6 +45,7 @@
 | POST | `/api/users/setup` | [setup.md](users/setup.md) | 要 |
 | POST | `/api/users/reset-password` | [reset-password.md](users/reset-password.md) | 🟢不要 |
 | POST | `/api/users/confirm-email-change` | [confirm-email-change.md](users/confirm-email-change.md) | 要 |
+| POST | `/api/users/sign-out` | [sign-out.md](users/sign-out.md) | 要 |
 
 ### 📝 ユデート（投稿）系 `/api/yudates/*`
 
@@ -67,6 +68,8 @@
 | POST | `/api/yudates/:id/report` | [report.md](yudates/report.md) | 要 |
 | GET | `/api/yudates/scheduled` | [scheduled.md](yudates/scheduled.md) | 要 |
 | DELETE | `/api/yudates/scheduled/:id` | [scheduled.md](yudates/scheduled.md) | 要 |
+| PATCH | `/api/yudates/:id/poll` | [poll.md](yudates/poll.md) | 要 |
+| POST | `/api/yudates/:id/poll/vote` | [poll.md](yudates/poll.md) | 要 |
 
 ### 🔍 探索・検索系 `/api/explore/*`
 
@@ -126,6 +129,12 @@
 | POST | `/api/games/:id/charge` | [charge.md](games/charge.md) | 要 |
 | DELETE | `/api/games/:id` | [update.md](games/update.md) | 要 |
 | POST | `/api/games/auth/verify` | [auth-verify.md](games/auth-verify.md) | 要 |
+| POST | `/api/games/:id/auth-request` | [auth-request.md](games/auth-request.md) | 要 |
+| POST | `/api/games/:id/charge-token` | [charge-token.md](games/charge-token.md) | 要 |
+| GET | `/api/games/:id/reward-requests` | [reward-requests.md](games/reward-requests.md) | 要 |
+| POST | `/api/games/:id/reward-requests/:requestId/:action` | [reward-requests.md](games/reward-requests.md) | 要 |
+| GET | `/api/games/:id/save-data` | [save-data.md](games/save-data.md) | 要 |
+| POST | `/api/games/:id/save-data` | [save-data.md](games/save-data.md) | 要 |
 
 ### 🏆 ランキング系 `/api/rankings/*`
 
@@ -173,6 +182,23 @@
 | POST | `/api/mikancoin/token` | [token.md](mikancoin/token.md) | 要 |
 | POST | `/api/mikancoin/exchange` | [exchange.md](mikancoin/exchange.md) | 要 |
 
+### 🇾 Ykc系 `/api/ykc/*`
+
+| メソッド | パス | ファイル | 認証 |
+|---|---|---|---|
+| GET | `/api/ykc/market` | [market.md](ykc/market.md) | 不要 |
+| GET | `/api/ykc/chart` | [chart.md](ykc/chart.md) | 不要 |
+| GET | `/api/ykc/wallet` | [wallet.md](ykc/wallet.md) | 要 |
+| GET | `/api/ykc/quote` | [quote.md](ykc/quote.md) | 不要 |
+| POST | `/api/ykc/token` | [token.md](ykc/token.md) | 要 |
+| POST | `/api/ykc/exchange` | [exchange.md](ykc/exchange.md) | 要 |
+| GET | `/api/ykc/admin/status` | [admin.md](ykc/admin.md) | 要 |
+| GET | `/api/ykc/admin/price-updates` | [admin.md](ykc/admin.md) | 要 |
+| GET | `/api/ykc/admin/anomalies` | [admin.md](ykc/admin.md) | 要 |
+| POST | `/api/ykc/admin/price-update` | [admin.md](ykc/admin.md) | 要 |
+| POST | `/api/ykc/admin/restore-previous-price` | [admin.md](ykc/admin.md) | 要 |
+| PATCH | `/api/ykc/admin/settings` | [admin.md](ykc/admin.md) | 要 |
+
 ---
 
 ## 凡例
@@ -187,7 +213,7 @@
 
 | 項目 | 値 |
 |---|---|
-| 総エンドポイント数 | 91 |
-| 総ファイル数 | 73 |
-| 認証要エンドポイント | 67 |
-| 認証不要エンドポイント | 24 |
+| 総エンドポイント数 | 112 |
+| 総ファイル数 | 86 |
+| 認証要エンドポイント | 85 |
+| 認証不要エンドポイント | 27 |

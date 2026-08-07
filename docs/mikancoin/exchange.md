@@ -119,3 +119,8 @@ const exchangeRes = await fetch("/api/mikancoin/exchange", {
   })
 })
 ```
+
+## 備考
+
+- フロントエンドは `/api/${Ct}/exchange`（`Ct = "ykc" | "mikancoin"`）の共通コードから呼び分けています。Ykc版は [/api/ykc/exchange](../ykc/exchange.md) を参照してください（Ykc版は取引前に `price` 送信が必要）
+- 取引上限・日次制限・手数料はYDC / MKC共通です
